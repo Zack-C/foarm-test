@@ -1,0 +1,63 @@
+<?php
+if (isset(
+$name,
+$lname,
+$email,
+$pass
+)) {
+    echo "it is set";
+}
+else {;
+?>
+<html>
+    <head>
+        <title>Test Form</title>
+        <style>
+            form {
+				max-width: 375px;
+                background: lightblue;
+                border: 3px solid orange;
+                margin-left: 10px;
+                border-radius: 5px;
+                box-shadow: 5 azure;
+            }
+            form div {
+            margin: 10px;
+            padding: 5px;
+            }
+            form label {
+                margin-left: 10px;
+            }
+        </style>
+    </head>
+    <body>
+        
+        <h1>Let my Test Yo Foarm</h1>
+        <div>
+            <form action="#" method="post">
+                <div><h3>Push yo invos</h3></div>
+                <label for="name">Put yo name here</label>
+                <div><input type="text" name="name" placeholder="put your first name here please" required></div>
+                <label for="last_name">Put yo last name</label>
+                <div><input type="text" name="lname" placeholder="put you last name here please" required></div>
+                <label for="email" >yo e-mail Here</label>
+                <div>
+                    <input type="email" name="email" placeholder="insert your e-mail" required></input>
+                </div>
+                <label for="password" >Put yo password here</label>
+                <div> <input type="password" name="password" placeholder="insert your password" required></div>
+                <div>
+                    <input type="submit" name="Submit">
+                </div>
+            </form>
+        </div>
+    </body>
+</html>
+<?php
+};
+$name = $_POST['name'];
+$lname = $_POST['lname'];
+$email = $_POST['email'];
+$pass = $_POST['password'];
+echo 'Hello  ' .  ' <b> ' .  $name  . ' </b> ' .  ' <b>' . $lname  . '</b>'  .  '  . '   .   ' your e-mail is :  '  .  '<b>' . $email .  '</b>' .  '!'  ;
+?>
